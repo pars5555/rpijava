@@ -1,5 +1,5 @@
-main header
-{if $ns.userLevel === $ns.userGroupsUser}
-    <a href="{$SITE_PATH}/dyn/user/do_logout">logout</a>    
-{/if}
-</br>
+<div>
+<a href="{$SITE_PATH}">logo</a>
+<a href="{$SITE_PATH}/projects">projects</a>
+<a href="{$SITE_PATH}/contact">contact</a>
+</div>

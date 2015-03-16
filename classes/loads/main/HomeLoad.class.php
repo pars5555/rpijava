@@ -10,8 +10,6 @@ require_once (CLASSES_PATH . "/loads/main/BaseGuestLoad.class.php");
 class HomeLoad extends BaseGuestLoad{
     
     public function load() {
-        $this->addParam('startHour', 9);
-        $this->addParam('endHour', 18);
     }
 
     public function getTemplate() {
