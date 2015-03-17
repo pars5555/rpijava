@@ -7,6 +7,7 @@ RewriteRule ^admin/?$  /dyn/admin/main/$1/?page=home [L,QSA]
 RewriteRule ^login$  /dyn/main/main/$1/?page=login [L,QSA]
 
 RewriteRule ^projects$  /dyn/main/main/$1/?page=projects [L,QSA]
+RewriteRule ^project/(.*)$  /dyn/main/main/$1/?page=project [L,QSA]
 RewriteRule ^contact$  /dyn/main/main/$1/?page=contact [L,QSA]
 
 
