@@ -1,28 +1,29 @@
 <?php
 
-require_once (CLASSES_PATH . "/framework/dal/dto/AbstractDto.class.php");
+class ProjectDto {
 
-/**
- * AdminDto class is extended class from AbstractDto.
- *
- * @author	Arman Tshitoyan
- */
-class ProjectDto extends AbstractDto {
+    private $id;
+    private $title;
 
-    // Map of DB value to Field value
-    protected $mapArray = array(
-        "id" => "id",
-        "title" => "title"
-    );
-
-    // constructs class instance
-    public function __construct() {
-        
+    function __construct($id, $title) {
+        $this->id = $id;
+        $this->title = $title;
     }
 
-    // returns map array
-    public function getMapArray() {
-        return $this->mapArray;
+    function getId() {
+        return $this->id;
+    }
+
+    function getTitle() {
+        return $this->title;
+    }
+
+    function setId($id) {
+        $this->id = $id;
+    }
+
+    function setTitle($title) {
+        $this->title = $title;
     }
 
 }

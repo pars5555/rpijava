@@ -12,8 +12,8 @@ class ProjectsLoad extends BaseGuestLoad {
 
     public function load() {
         $projectsManager = ProjectsManager::getInstance();
-        $allProjects = $projectsManager->selectAll();
-        $this->addParam("all_projects", $allProjects);
+        $allProjects = $projectsManager->getAllProjects();
+        $this->addParam("projects", $allProjects);
     }
 
     public function getTemplate() {

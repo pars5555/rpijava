@@ -1,6 +1,7 @@
 <?php
 
 require_once (CLASSES_PATH . "/loads/main/BaseGuestLoad.class.php");
+require_once (CLASSES_PATH . "/managers/ProjectsManager.class.php");
 
 /**
  *
@@ -13,6 +14,9 @@ class ProjectLoad extends BaseGuestLoad {
 
     public function load() {
         $this->projectId = $this->args[0];
+        $projectsManager = ProjectsManager::getInstance();
+        $project = $projectsManager->getProject($this->projectId);
+        $this->addParam("project", $project);
     }
 
     public function getTemplate() {

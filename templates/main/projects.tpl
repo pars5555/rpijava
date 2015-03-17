@@ -1,4 +1,4 @@
-{foreach from=$ns.all_projects item=projectDto key=index}
-    <a href="{$SITE_PATH}/project/{$projectDto->getId()}">{$projectDto->getTitle()}</a>
+{foreach from=$ns.projects item=project key=index}
+    <a href="{$SITE_PATH}/project/{$project->getId()}">{$project->getTitle()}</a>
     </br>
 {/foreach}

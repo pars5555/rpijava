@@ -1,33 +1,5 @@
 <h1>{$project->getTitle()}</h1>
-<img src="{$SITE_PATH}/img/projects/{$project->getId()}/dht11.jpg"/>
-<img src="{$SITE_PATH}/img/projects/{$project->getId()}/dht22.jpg"/>
-<p>
-    DHT22:</br>
-    3 to 5V power and I/O</br>
-    2.5mA max current use during conversion (while requesting data)</br>
-    Good for 0-100% humidity readings with 2-5% accuracy</br>
-    Good for -40 to 80°C temperature readings ±0.5°C accuracy</br>
-    No more than 0.5 Hz sampling rate (once every 2 seconds)</br>
-    Body size 27mm x 59mm x 13.5mm (1.05" x 2.32" x 0.53")</br>
-    4 pins, 0.1" spacing
-</p>
-<p>
-    DHT11:</br>
-    3 to 5V power and I/O</br>
-    2.5mA max current use during conversion (while requesting data)</br>
-    Good for 20-80% humidity readings with 5% accuracy</br>
-    Good for 0-50°C temperature readings ±2°C accuracy</br>
-    No more than 1 Hz sampling rate (once every second)</br>
-    Body size 15.5mm x 12mm x 5.5mm</br>
-    4 pins with 0.1" spacing</br>
-</p>
-<img src="{$SITE_PATH}/img/projects/{$project->getId()}/wiring.jpg"/>
-<p>
-    Connect the pins in the following way.</br>
-    •	VCC to 3.3V</br>
-    •	GND to GND.</br>
-    •	Data to Any GPIO PIN.
-</p>
+<img src="{$SITE_PATH}/img/projects/{$project->getId()}/1.jpg"/>
 
 <h3>Installing the Library</h3>
 <p>
