@@ -4,6 +4,7 @@
         {include file="$TEMPLATE_DIR/main/util/headerControls.tpl"}
     </head>    
     <body>
+        <a style="visibility: hidden;position: fixed" href="https://plus.google.com/104486041980261075638" rel="publisher">Google+</a>
         {include file="$TEMPLATE_DIR/main/util/header.tpl"}       
         {nest ns=content}                        
         {include file="$TEMPLATE_DIR/main/util/footer.tpl"}
