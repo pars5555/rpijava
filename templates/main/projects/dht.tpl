@@ -104,3 +104,5 @@
 <p>
     That's all you need to get you DHT sensor resut in JAVA :)
 </p>
+
+{include file="$TEMPLATE_DIR/main/paypal_donation.tpl"}

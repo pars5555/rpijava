@@ -25,11 +25,8 @@
     download 
     <a href="{$SITE_PATH}/projects_data/{$project->getId()}/hcsr04.zip" download>hcsr04.zip</a> </br>
     Project is written in Netbeans IDE and it is setup to run remotely on Raspberry PI, so you need to change the IP address in project properties.</br>
-    Project has dependency to pi4j library which is included in the project.
-    So you need to have installe PI4J library installed on your Raspberry PI.
+    Project has dependency to You need to have <a href="{$SITE_PATH}/project/pi4j" target="_blank">PI4J library</a> which is included in the project.</br>
+    You will need <a href="{$SITE_PATH}/projects_data/{$project->getId()}/pi4j-core.jar" download>pi4j-core.jar</a> to add into the project libraries.
 </p>
-<code>
-   1. curl -s get.pi4j.com | sudo bash</br>
-   2. pi4j --update
-</code>
 
+{include file="$TEMPLATE_DIR/main/paypal_donation.tpl"}

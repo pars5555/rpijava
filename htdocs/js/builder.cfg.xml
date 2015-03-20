@@ -60,7 +60,10 @@
             <files>
                 <file doc="true">ngs/loads/AbstractLoad.class.js</file>
                 <file>ngs/loads/main/MainLoad.class.js</file>
-                				
+                <file>ngs/loads/main/HomeLoad.class.js</file>
+                <file>ngs/loads/main/ContactLoad.class.js</file>
+                <file>ngs/loads/main/ProjectsLoad.class.js</file>
+                <file>ngs/loads/main/ProjectLoad.class.js</file>
                 <file>ngs/loads/admin/AdminMainLoad.class.js</file>
                 <file>ngs/loads/admin/AdminHomeLoad.class.js</file>
             

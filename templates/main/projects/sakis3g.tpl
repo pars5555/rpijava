@@ -1,78 +1,41 @@
 <h1>{$project->getTitle()}</h1>
 <img src="{$SITE_PATH}/img/projects/{$project->getId()}/1.jpg"/>
 
-<h3>Installing the Library</h3>
-<p>
-    To install the Python library on either the Raspberry Pi you will first need a few dependencies. 
-    Execute the following command to install these dependencies (assuming you're using Raspbian on the Pi):   
-</p>
+<h3>Installing Libraries</h3>
 <code>
-    1.	sudo apt-get update</br>
-    2.	sudo apt-get install build-essential python-dev</br>
+    apt-get install ppp usb-modeswitch wvdial</br>
+    apt-get install usb-modeswitch-data</br>
+    apt-get install libusb-1.0.0
 </code>
 
-
-<h3>Downloading the Code</h3>
+<h3>Installing Sakis3g</h3>
 <p>
     download 
-    <a href="{$SITE_PATH}/projects_data/{$project->getId()}/Python-DHT-lib.zip" download>Python-DHT-lib.zip</a> 
+    <a href="{$SITE_PATH}/projects_data/{$project->getId()}/sakis3g.tar.gz" download>sakis3g.tar.gz</a> 
     (ex. "/home/pi"):
 </p>
 <code>
-    1.	unzip Python-DHT-lib.zip</br>
-    2.	cd Python-DHT-lib</br>
-    3.	sudo python setup.py install</br>
+    sudo mkdir /usr/bin/modem3g</br>
+    sudo chmod 777 /usr/bin/modem3g</br>
+    sudo cp sakis3g.tar.gz /usr/bin/modem3g</br>
+    cd /usr/bin/modem3g</br>
+    sudo tar -zxvf sakis3g.tar.gz</br>
+    sudo chmod +x sakis3g
 </code>
-<p>
-    This should compile the code for the library and install it on your device so any Python program can access the Adafruit_DHT python module.
-</p>
 
 
-<h3>Testing</h3>
+<h3>Connecting to internet</h3>
 <p>
-    To test the DHT sensor run following Python file to see the result:
+    Connecting to internet with interactive user interface
 </p>
 <code>
-    sudo python examples/DHTReader.py DHT_MODEL GPIO_PIN_NUMBER
+    /usr/bin/modem3g/sakis3g --interactive "menu" "console"
 </code>
 <p>
-    Where DHT_MODEL should be 11 (for DHT11) or 22 (for DHT22)</br>
-    and GPIO_PIN_NUMBER is the GPIO pin number where you connected the sensor data pin
+    Connecting to internet in silent mode (without user interface)
 </p>
+<code>
+    /usr/bin/modem3g/sakis3g connect APN=internet.beeline.am  APN_USER=internet APN_PASS=internet USBINTERFACE=0
+</code>
 
-
-<h3>Getting sensor result in JAVA</h3>
-<p>
-    Now getting the sensor result in JAVA is easy using Python code above. So we just need to <code>exec</code> Python code above and read the output data.</br>
-    you will need following java library to parse the JSON result</br>
-    <a href="{$SITE_PATH}/projects_data/{$project->getId()}/json-simple-1.1.1.jar" download>json-simple-1.1.1.jar</a> 
-
-</p>
-{literal}
-    <pre>
-    <code>
-        public static void main(String[] args) {
-        try {
-            int DHT_MODEL = 11;
-            int GPIO_PIN_NUMBER = 4;
-            Process p = Runtime.getRuntime().exec("python /home/pi/DHTReader.py "+DHT_MODEL+" "+GPIO_PIN_NUMBER);
-            InputStream inputStream = p.getInputStream();
-            InputStreamReader isr = new InputStreamReader(inputStream);
-            BufferedReader br = new BufferedReader(isr);
-            String jsonResult = br.readLine();
-            System.err.println(jsonResult);
-            JSONParser jp = new JSONParser();
-            JSONObject parse = (JSONObject) jp.parse(jsonResult);
-            String Humidity = (String) parse.get("Humidity");
-            String Temp = (String) parse.get("Temp");
-            System.err.println(Humidity + ";" + Temp);
-        } catch (Exception ex) {
-            
-        }
-    </code>
-    </pre>
-{/literal}
-
-<p>
-    That's all you need to get you DHT sensor resut in JAVA :)
-</p>
+{include file="$TEMPLATE_DIR/main/paypal_donation.tpl"}

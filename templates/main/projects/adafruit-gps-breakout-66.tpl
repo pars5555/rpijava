@@ -150,3 +150,6 @@
 </code>
     </pre>
 {/literal}
+
+
+{include file="$TEMPLATE_DIR/main/paypal_donation.tpl"}
