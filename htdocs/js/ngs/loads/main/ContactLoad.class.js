@@ -15,11 +15,6 @@ ngs.ContactLoad = Class.create(ngs.AbstractLoad, {
         return "contact";
     },
     afterLoad: function () {
-        jQuery('#upload_btn').click(function () {
-            jQuery('#logo_picture').trigger("click");
-        });
-        jQuery('#logo_picture').change(function () {
-            jQuery(this).parent('form').submit();
-        });
+        
     }
 });
