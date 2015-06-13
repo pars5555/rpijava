@@ -32,6 +32,8 @@ class ProjectsManager extends AbstractManager {
         $this->projects["mpu9150"] = new ProjectDto("mpu9150", "MPU-9150 Nine-Axis (Gyro + Accelerometer + Compass)");
         $this->projects["pi4j"] = new ProjectDto("pi4j", "Installing PI4J");
         $this->projects["netbeans"] = new ProjectDto("netbeans", "Running JAVA project remotely from Netbeans");
+        $this->projects["hc-sr501"] = new ProjectDto("hc-sr501", "HC-SR501 Motion Sensor");
+        $this->projects["l298n"] = new ProjectDto("l298n", "L298N Motor Driver Board");
     }
 
     /**

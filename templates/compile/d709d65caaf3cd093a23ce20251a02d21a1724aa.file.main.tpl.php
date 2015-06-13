@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2015-03-16 21:00:26
+<?php /* Smarty version Smarty-3.1.11, created on 2015-04-19 10:24:43
          compiled from "D:\xampp\htdocs\rpijava\templates\main\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:397654f9b0da6d9009-96956713%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd709d65caaf3cd093a23ce20251a02d21a1724aa' => 
     array (
       0 => 'D:\\xampp\\htdocs\\rpijava\\templates\\main\\main.tpl',
-      1 => 1426525011,
+      1 => 1427136175,
       2 => 'file',
     ),
   ),
@@ -31,6 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     </head>    
     <body>
+        <a style="visibility: hidden;position: fixed" href="https://plus.google.com/104486041980261075638" rel="publisher">Google+</a>
         <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['TEMPLATE_DIR']->value)."/main/util/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
        
         <?php echo smarty_function_nest(array('ns'=>'content'),$_smarty_tpl);?>
